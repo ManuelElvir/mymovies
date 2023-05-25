@@ -4,7 +4,7 @@ Progressive web application for movie suggestion
 
 ## Installation
 
-1. Clonez le dépôt : `git clone [https://github.com/ManuelElvir/mymovies.git](https://github.com/ManuelElvir/mymovies.git)`
+1. Clonez le dépôt : `git clone https://github.com/ManuelElvir/mymovies.git`
 2. Accédez au répertoire du projet : `cd mymovies`
 3. Installez les dépendances : `npm install`
 
