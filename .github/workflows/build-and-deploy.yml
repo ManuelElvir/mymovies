@@ -51,4 +51,8 @@ jobs:
           path: './build'
 
       - name: Deploy to GitHub Pages
-        run: npm run deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./build
+          publish_branch: gh-pages
