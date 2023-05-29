@@ -1,0 +1,1 @@
+export {default, fetchHomeData} from './Home.Component'
