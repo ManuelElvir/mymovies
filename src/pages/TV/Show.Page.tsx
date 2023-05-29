@@ -3,7 +3,7 @@ import React from 'react'
 type ShowTVProps = {
 }
 
-const ShowTV : React.FC<ShowTVProps> = ({}) => {
+const ShowTV : React.FC<ShowTVProps> = () => {
 
     return(
         <div>

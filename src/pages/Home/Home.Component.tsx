@@ -5,7 +5,7 @@ import { LoaderFunctionArgs } from 'react-router-dom';
 type HomeProps = {
 }
 
-const Home : React.FC<HomeProps> = ({}) => {
+const Home : React.FC<HomeProps> = () => {
 
     return(
         <div>
