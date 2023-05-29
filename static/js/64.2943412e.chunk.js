@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_movies=self.webpackChunkmy_movies||[]).push([[64],{64:function(n,e,t){t.r(e),t.d(e,{fetchTVData:function(){return c}});t(791);var u=t(184);function c(){}e.default=function(){return(0,u.jsx)("div",{})}}}]);
+//# sourceMappingURL=64.2943412e.chunk.js.map
