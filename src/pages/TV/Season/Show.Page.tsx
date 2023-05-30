@@ -1,9 +1,10 @@
 import React from 'react'
+import withMainLayout from '../../../layouts/withMainLayout'
 
-type ShowTVProps = {
+type ShowProps = {
 }
 
-const ShowTV : React.FC<ShowTVProps> = () => {
+const Show : React.FC<ShowProps> = () => {
 
     return(
         <div>
@@ -12,8 +13,13 @@ const ShowTV : React.FC<ShowTVProps> = () => {
     )
 }
 
-export function fetchShowTVData() {
-    
+Show.displayName = 'TV-Program-Season'
+
+const actionButton = {
+    key: "library",
+    label: "My Library",
+    route: "/my-library",
+    icon: "solar:library-line-duotone"
 }
 
-export default ShowTV
+export default withMainLayout(Show, Show.displayName||'TV-Program-Season', actionButton)

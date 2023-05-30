@@ -1,9 +1,10 @@
 import React from 'react'
+import withMainLayout from '../../layouts/withMainLayout'
 
-type IndexProps = {
+type ListProps = {
 }
 
-const Index : React.FC<IndexProps> = () => {
+const List : React.FC<ListProps> = () => {
 
     return(
         <div>
@@ -12,8 +13,13 @@ const Index : React.FC<IndexProps> = () => {
     )
 }
 
-export function fetchIndexData() {
-    
+List.displayName = 'Movies'
+
+const actionButton = {
+    key: "library",
+    label: "My Library",
+    route: "/my-library",
+    icon: "solar:library-line-duotone"
 }
 
-export default Index
+export default withMainLayout(List, List.displayName||'Movies', actionButton)
