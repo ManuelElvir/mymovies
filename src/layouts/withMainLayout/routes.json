@@ -1,0 +1,26 @@
+[
+    {
+        "label": "Home",
+        "route": "/",
+        "icon": "clarity:home-line",
+        "key": "home"
+    },
+    {
+        "label": "TV",
+        "route": "/tv",
+        "icon": "gala:tv",
+        "key": "tv"
+    },
+    {
+        "label": "Movie",
+        "route": "/movie",
+        "icon": "fluent:movies-and-tv-20-regular",
+        "key": "movie"
+    },
+    {
+        "label": "People",
+        "route": "/people",
+        "icon": "fluent:people-20-regular",
+        "key": "movie"
+    }
+]

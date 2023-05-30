@@ -1,24 +1,22 @@
 import React from'react'
 import { Icon } from '@iconify/react';
 import { useLocation } from 'react-router-dom'
-import styles from './TabBar.module.scss'
+import styles from './Sidebar.module.scss'
 import Logo from '../Logo/Logo.Component';
 
 
-type TabBarItem = {
+type SidebarItem = {
     key: string|number
     label : string
     route: string
     icon: string
 }
 
-type TabBarProps = {
-    data : Array<TabBarItem>
-    activeTab: number
-    changeActiveTab: () => void
+type SidebarProps = {
+    routes : Array<SidebarItem>
 }
 
-const TabBarElement = ({label, route, icon, isActive}:TabBarItem & {isActive: boolean}) => {
+const SidebarElement = ({label, route, icon, isActive}:SidebarItem & {isActive: boolean}) => {
     return (
         <div className={`${isActive?styles.active:''} ${styles.navigationItem}`}>
             <Icon className={styles.icon} icon={icon} />
@@ -27,7 +25,7 @@ const TabBarElement = ({label, route, icon, isActive}:TabBarItem & {isActive: bo
     )
 }
 
-const TabBar: React.FC<TabBarProps> =  ({data}) => {
+const Sidebar: React.FC<SidebarProps> =  ({routes}) => {
     const {pathname} = useLocation()
     return(
         <div className={styles.navigation}>
@@ -35,10 +33,10 @@ const TabBar: React.FC<TabBarProps> =  ({data}) => {
                 <Logo />
             </div>
             <div className={styles.navigationContent}>
-                {data.map((item:TabBarItem, index:number) => <TabBarElement isActive={pathname===item.route} {...item} />)}
+                {routes.map((item:SidebarItem, index:number) => <SidebarElement isActive={pathname===item.route} {...item} />)}
             </div>
         </div>
     )
 }
 
-export default TabBar
+export default Sidebar

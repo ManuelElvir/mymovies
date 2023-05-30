@@ -1,1 +1,1 @@
-export {default, fetchHomeData} from './Home.Component'
+export {default} from './Home.Component'

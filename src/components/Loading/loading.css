@@ -3,10 +3,16 @@ html, body {
 }
 
 body {
+  background-color: #F6F5F4;
   align-items: center;
-  background-color: #1D1F20;
   display: flex;
   justify-content: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  body{
+    background-color: #1D1F20;
+  }
 }
 
 .loader  {

@@ -1,9 +1,10 @@
 import React from 'react'
+import withMainLayout from '../../layouts/withMainLayout'
 
-type TVProps = {
+type ListProps = {
 }
 
-const TV : React.FC<TVProps> = () => {
+const List : React.FC<ListProps> = () => {
 
     return(
         <div>
@@ -12,8 +13,13 @@ const TV : React.FC<TVProps> = () => {
     )
 }
 
-export function fetchTVData() {
-    
+List.displayName = 'TV'
+
+const actionButton = {
+    key: "library",
+    label: "My Library",
+    route: "/my-library",
+    icon: "solar:library-line-duotone"
 }
 
-export default TV
+export default withMainLayout(List, List.displayName||'TV', actionButton)
