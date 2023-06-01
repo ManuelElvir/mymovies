@@ -38,7 +38,7 @@ Explication de la structure des fichiers et des répertoires du projet.
 
 ## Licence
 
-Indiquez la licence du projet.
+GNU v3.0
 
 ---
 © ManuelElvir | 2023
