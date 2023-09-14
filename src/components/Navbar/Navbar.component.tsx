@@ -17,6 +17,7 @@ type NavbarProps = {
 }
 
 const NavbarElement = ({label, icon, isActive}:NavbarItem & {isActive: boolean}) => {
+    
     return (
         <div className={`${isActive?styles.active:''} ${styles.navigationItem}`}>
             <Icon className={styles.icon} icon={icon} />

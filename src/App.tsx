@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import Loading from './components/Loading';
 import { ThemeModeProvider } from './context/ThemeMode';
+import ErrorBoundaryClass from './components/ErrorBoundaryClass';
 
 const Home = React.lazy(() => import('./pages/Home'));
 const MovieList = React.lazy(() => import('./pages/Movie/List.Page'));
@@ -16,12 +17,14 @@ const NoMatch = React.lazy(() => import('./pages/NoMatch'));
 
 const App = () => {
   return (
+    <ErrorBoundaryClass>
     <ThemeModeProvider>
       <BrowserRouter>
         <Routes>
           <Route
             index
             path='/'
+            errorElement={<ErrorBoundary />}
             ErrorBoundary={ErrorBoundary}
             element={
               <React.Suspense fallback={<Loading />}>
@@ -39,6 +42,7 @@ const App = () => {
             children={[
               <Route
                 path='movie/:id'
+                key="show_movie"
                 element={
                   <React.Suspense fallback={<Loading />}>
                     <Movie />
@@ -57,6 +61,7 @@ const App = () => {
             children={[
               <Route
                 path='tv/:id'
+                key="show_tv"
                 element={
                   <React.Suspense fallback={<Loading />}>
                     <TV />
@@ -65,6 +70,7 @@ const App = () => {
               />,
               <Route
                 path='tv/:id/season'
+                key="show_tv_season"
                 element={
                   <React.Suspense fallback={<Loading />}>
                     <TVSeason />
@@ -83,6 +89,7 @@ const App = () => {
             children={[
               <Route
                 path='people/:id'
+                key="show_people"
                 element={
                   <React.Suspense fallback={<Loading />}>
                     <Person />
@@ -95,6 +102,7 @@ const App = () => {
         </Routes>
       </BrowserRouter>
     </ThemeModeProvider>
+    </ErrorBoundaryClass>
   );
 };
 

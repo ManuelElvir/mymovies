@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export function isDarkMode(window: Window) {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (window?.matchMedia && window?.matchMedia('(prefers-color-scheme: dark)')?.matches) {
         return true
     }
     return false
